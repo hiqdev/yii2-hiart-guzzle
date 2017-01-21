@@ -1,0 +1,10 @@
+package:
+    type:           yii2-extension
+    name:           yii2-hiart-guzzle
+    title:          Guzzle transport for yii2-hiart
+    headline:       Yii2 Hiart Guzzle
+    keywords:       yii2, hiart, guzzle
+    namespace:      hiqdev\hiart\guzzle
+    description:    |
+        This package provides [Guzzle](https://github.com/guzzle/guzzle) transport
+        for [yii2-hiart](https://github.com/hiqdev/yii2-hiart).
