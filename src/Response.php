@@ -18,7 +18,7 @@ use Psr\Http\Message\ResponseInterface as Worker;
  *
  * @author Andrii Vasyliev <sol@hiqdev.com>
  */
-class Response extends AbstractResponse
+class Response extends \hiqdev\hiart\proxy\Response
 {
     /**
      * @var Worker
