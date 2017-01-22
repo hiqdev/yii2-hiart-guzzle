@@ -1,4 +1,4 @@
-Yii2 Hiart Guzzle
+Yii2 HiArt Guzzle
 =================
 
 **Guzzle transport for yii2-hiart**

@@ -2,7 +2,7 @@ package:
     type:           yii2-extension
     name:           yii2-hiart-guzzle
     title:          Guzzle transport for yii2-hiart
-    headline:       Yii2 Hiart Guzzle
+    headline:       Yii2 HiArt Guzzle
     keywords:       yii2, hiart, guzzle
     namespace:      hiqdev\hiart\guzzle
     description:    |
