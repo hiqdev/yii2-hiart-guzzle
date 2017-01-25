@@ -10,41 +10,30 @@
 
 namespace hiqdev\hiart\guzzle;
 
+use GuzzleHttp\Client as Handler;
 use GuzzleHttp\Psr7\Request as Worker;
-use hiqdev\hiart\ProxyRequest;
-use yii\base\InvalidConfigException;
 
 /**
  * Guzzle request implementation.
  *
  * @author Andrii Vasyliev <sol@hiqdev.com>
  */
-class Request extends ProxyRequest
+class Request extends \hiqdev\hiart\proxy\Request
 {
-    protected $workerClass = Worker::class;
+    protected $responseClass = Response::class;
+
+    protected $handlerClass = Handler::class;
 
     protected function createWorker()
     {
-        return new $this->workerClass($this->method, $this->uri, $this->headers, $this->body, $this->version);
+        return new Worker($this->method, $this->uri, $this->headers, $this->body, $this->version);
     }
 
-    /**
-     * {@inheritdoc}
-     * @throws InvalidConfigException
-     */
     protected function prepareHandlerConfig($config)
     {
-        if ($this->getDb()->baseUri) {
-            $config['base_uri'] = $this->getDb()->baseUri;
-        }
-        if (empty($config['base_uri'])) {
-            throw new InvalidConfigException('The `baseUri` option must be set in HiArt config');
-        }
-
-        if (empty($config['headers']['User-Agent'])) {
-            $config['headers']['User-Agent'] = 'HiArt/0.x';
-        }
-
-        return $config;
+        return array_merge([
+            'base_uri' => $this->getDb()->getBaseUri(),
+        ], $config);
     }
+
 }

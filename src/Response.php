@@ -28,4 +28,9 @@ class Response extends \hiqdev\hiart\proxy\Response
     {
         return $this->worker->getBody()->getContents();
     }
+
+    public function __call($name, $args)
+    {
+        return call_user_func_array([$this->worker, $name], $args);
+    }
 }
