@@ -43,16 +43,25 @@
         }
     ],
     "require": {
-        "hiqdev/yii2-hiart": "<2.0 || dev-master",
+        "hiqdev/yii2-hiart": "<2.0 || *@dev",
         "guzzlehttp/guzzle": "^6.0"
     },
     "require-dev": {
+        "yiisoft/yii2": "dev-master",
+        "hiqdev/yii2-hiart-github": "<2.0 || *@dev",
         "hiqdev/hidev-php": "<2.0 || dev-master",
         "hiqdev/hidev-hiqdev": "<2.0 || dev-master"
     },
     "autoload": {
         "psr-4": {
             "hiqdev\\hiart\\guzzle\\": "src"
+        }
+    },
+    "extra": {
+        "config-plugin": {
+            "params": "src/config/params.php",
+            "hisite": "src/config/common.php",
+            "hidev": "src/config/common.php"
         }
     },
     "repositories": [
