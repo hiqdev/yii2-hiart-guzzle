@@ -10,7 +10,6 @@
 
 namespace hiqdev\hiart\guzzle;
 
-use hiqdev\hiart\AbstractResponse;
 use Psr\Http\Message\ResponseInterface as Worker;
 
 /**

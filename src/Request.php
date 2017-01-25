@@ -47,5 +47,4 @@ class Request extends ProxyRequest
 
         return $config;
     }
-
 }
