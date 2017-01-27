@@ -26,7 +26,18 @@ class Response extends \hiqdev\hiart\proxy\Response
 
     public function getRawData()
     {
-        return $this->worker->getBody()->getContents();
+        $body = $this->worker->getBody();
+
+        if ($body->isSeekable()) {
+            $originalPosition = $body->tell();
+            $body->rewind();
+            $result = $body->getContents();
+            $body->seek($originalPosition);
+
+            return $result;
+        }
+
+        return $body->getContents();
     }
 
     public function __call($name, $args)
