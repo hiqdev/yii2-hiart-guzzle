@@ -24,20 +24,18 @@ class Response extends \hiqdev\hiart\proxy\Response
      */
     protected $worker;
 
+    /**
+     * @var string
+     */
+    protected rawData;
+
     public function getRawData()
     {
-        $body = $this->worker->getBody();
-
-        if ($body->isSeekable()) {
-            $originalPosition = $body->tell();
-            $body->rewind();
-            $result = $body->getContents();
-            $body->seek($originalPosition);
-
-            return $result;
+        if ($this->rawData === null) {
+            $this->rawData = $this->worker->getBody()->getContents();
         }
 
-        return $body->getContents();
+        return $this-rawData;
     }
 
     public function __call($name, $args)
