@@ -27,7 +27,7 @@ class Response extends \hiqdev\hiart\proxy\Response
     /**
      * @var string
      */
-    protected rawData;
+    protected $rawData;
 
     public function getRawData()
     {
@@ -35,7 +35,7 @@ class Response extends \hiqdev\hiart\proxy\Response
             $this->rawData = $this->worker->getBody()->getContents();
         }
 
-        return $this-rawData;
+        return $this->rawData;
     }
 
     public function __call($name, $args)
