@@ -1,5 +1,13 @@
 # hiqdev/yii2-hiart-guzzle
 
+## [0.1.0] - 2017-01-28
+
+- Fixed `Response::getRawData` to get raw data only once
+    - [4731c2b] 2017-01-28 fixed typos [@hiqsol]
+    - [d04b3b3] 2017-01-28 simplified getting rawData in Response [@hiqsol]
+    - [095ffad] 2017-01-27 Fixed Response::getRawData to handle seeksable streams correctly [@SilverFire]
+    - [4e485b9] 2017-01-25 used tests config [@hiqsol]
+
 ## [0.0.1] - 2017-01-25
 
 - Added basics
@@ -34,5 +42,10 @@
 [d739603]: https://github.com/hiqdev/yii2-hiart-guzzle/commit/d739603
 [b57e8fc]: https://github.com/hiqdev/yii2-hiart-guzzle/commit/b57e8fc
 [af5c643]: https://github.com/hiqdev/yii2-hiart-guzzle/commit/af5c643
-[Under development]: https://github.com/hiqdev/yii2-hiart-guzzle/releases
+[Under development]: https://github.com/hiqdev/yii2-hiart-guzzle/compare/0.0.1...HEAD
 [0.0.1]: https://github.com/hiqdev/yii2-hiart-guzzle/releases/tag/0.0.1
+[4731c2b]: https://github.com/hiqdev/yii2-hiart-guzzle/commit/4731c2b
+[d04b3b3]: https://github.com/hiqdev/yii2-hiart-guzzle/commit/d04b3b3
+[095ffad]: https://github.com/hiqdev/yii2-hiart-guzzle/commit/095ffad
+[4e485b9]: https://github.com/hiqdev/yii2-hiart-guzzle/commit/4e485b9
+[0.1.0]: https://github.com/hiqdev/yii2-hiart-guzzle/compare/0.0.1...0.1.0
