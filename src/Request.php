@@ -35,4 +35,9 @@ class Request extends \hiqdev\hiart\proxy\Request
             'base_uri' => $this->getDb()->getBaseUri(),
         ], $config);
     }
+
+    public static function isSupported()
+    {
+        return true;
+    }
 }
