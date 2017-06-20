@@ -1,5 +1,4 @@
-Yii2 HiArt Guzzle
-=================
+# Yii2 HiArt Guzzle
 
 **Guzzle transport for yii2-hiart**
 
