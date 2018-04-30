@@ -16,6 +16,7 @@ use Psr\Http\Message\ResponseInterface as Worker;
  * Guzzle response implementation.
  *
  * @author Andrii Vasyliev <sol@hiqdev.com>
+ * @method \Psr\Http\Message\ResponseInterface getWorker()
  */
 class Response extends \hiqdev\hiart\proxy\Response
 {
