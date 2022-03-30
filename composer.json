@@ -44,7 +44,7 @@
     ],
     "require": {
         "hiqdev/yii2-hiart": "dev-master",
-        "guzzlehttp/guzzle": "^7.0"
+        "guzzlehttp/guzzle": "^7.4"
     },
     "require-dev": {
         "yiisoft/yii2": "dev-master",
